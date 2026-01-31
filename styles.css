@@ -1,0 +1,147 @@
+/* BIẾN MÀU SẮC */
+:root {
+    --zen-green: #6b705c; /* Xanh rêu thanh tịnh */
+    --paper-bg: #fdfaf5; /* Màu giấy cũ */
+    --wood-brown: #a68a64; /* Màu gỗ nhạt */
+    --text-main: #3b3d33;
+}
+
+/* THIẾT LẬP CHUNG */
+body {
+    background-color: var(--paper-bg);
+    color: var(--text-main);
+    font-family: 'Lora', serif;
+    margin: 0;
+    line-height: 1.8;
+    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* SECTION VÀ HIỆU ỨNG HOVER */
+section {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid transparent;
+    cursor: default;
+}
+
+section:hover {
+    transform: translateY(-10px) scale(1.01);
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--zen-green);
+    box-shadow: 0 20px 40px rgba(107, 112, 92, 0.1);
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--zen-green);
+    font-size: 2.5rem;
+    margin-top: 0;
+    border-bottom: 1px dashed var(--wood-brown);
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* HEADER: ẢNH VÀ VIDEO */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    transition: transform 0.6s ease;
+    margin-bottom: 30px;
+}
+
+.book-cover:hover {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.video-player {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: #000;
+    margin: 20px auto;
+    display: block;
+}
+
+.subtitle {
+    font-style: italic; 
+    color: #888;
+}
+
+/* DANH SÁCH THÔNG TIN */
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    padding: 15px 0 15px 40px;
+    position: relative;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+}
+
+.info-list li::before {
+    content: '🍃';
+    position: absolute;
+    left: 0;
+    top: 18px;
+}
+
+/* TRÍCH DẪN */
+.quote-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--wood-brown);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: #777;
+}
+
+.contact-link {
+    color: var(--zen-green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--wood-brown);
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+.fade-in {
+    animation: fadeInAnim 2s ease forwards;
+}
+
+@keyframes fadeInAnim {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
